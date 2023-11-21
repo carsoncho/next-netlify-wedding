@@ -58,7 +58,9 @@ export default function ContactForm() {
               ref={inputFileRef}
               onChangeCapture={onFileChangeCapture}
               name="file"
-              type="file" />
+              type="file"
+              accept="image/*"
+            />
           </label>
         </p>
         <p>
