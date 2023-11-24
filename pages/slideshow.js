@@ -43,22 +43,18 @@ function ImageSwapper () {
         });
 
         setPostedImages(imgs);
-        console.log('got images');
-        // console.log(data);
       } catch (err) {
         console.log(err);
       }
     };
 
     const swapImage = async () => {
-      console.log("Swap Image");
-      console.log(images);
+      console.log("Swapping Image");
+      let selectedIndex = Math.floor(Math.random() * images.length);
       setImageClass('fadeout');
       setImagePosition(styles[Math.floor(Math.random() * styles.length)]);
-      setCurrentImage(images[Math.floor(Math.random() * images.length)]);
+      setCurrentImage(images[selectedIndex]);
     }
-
-    console.log("render");
 
     const styles = [
       "top-left",
@@ -68,60 +64,20 @@ function ImageSwapper () {
     ];
 
     let images = [
-      // { img: 'g1.jpeg' },
-      // { img: 'g2.jpeg' },
-      // { img: 'g3.jpeg' },
-      // { img: 'g5.jpeg' },
-      // { img: 'g6.jpeg' },
-      // { img: 'g8.jpeg' },
-      // { img: 'g9.jpeg' },
-      // { img: 'g10.jpeg' },
-      // { img: 'g11.jpeg' },
-      // { img: 'g12.jpeg' },
-      // { img: 'g14.jpeg' },
-      // { img: 'g15.jpeg' },
-      // { img: 'g16.jpeg' },
-      // { img: 'g17.jpeg' },
-      // { img: 'g18.jpeg' },
-      // { img: 'g19.jpeg' },
-      // { img: 'g20.jpeg' },
-      // { img: 'g21.jpeg' },
-      // { img: 'g22.jpeg' },
-      // { img: 'g24.jpeg' },
-      // { img: 'g25.jpeg' },
-      // { img: 'g26.jpeg' },
-      // { img: 'g28.jpeg' },
-      // { img: 'g29.jpeg' },
-      // { img: 'g30.jpeg' },
-      // { img: 'g31.jpeg' },
-      // { img: 'g32.jpeg' },
-      // { img: 'g33.jpeg' },
-      // { img: 'g34.jpeg' },
-      // { img: 'g35.jpeg' },
-      // { img: 'g37.jpeg' },
-      // { img: 'g38.jpeg' },
-      // { img: 'g39.jpeg' },
-      // { img: 'g40.jpeg' },
+      { img: 'johnson-engage-52.jpg' },
+      { img: 'johnson-engage-86bw.jpg' },
+      { img: 'johnson-engage-183.jpg' },
+      { img: 'johnson-engage-104.jpg' },
+      { img: 'johnson-engage-364.jpg' },
+      { img: 'IMG_1318.jpg' },
+      { img: 'IMG_2551.jpeg' },
     ]
 
-    // advice.forEach((element) => {
-    //   element.question = 'Would you care to share some wedding or marriage advice with us?';
-    //   images.push(element);
-    // });
-    // songs.forEach((element) => {
-    //   element.question = 'Is there a specific song you\'d like to dance to?';
-    //   images.push(element);
-    // });
-
     if (postedImages) {
-      console.log(postedImages);
       images = images.concat(postedImages);
     }
 
     useEffect(() => {
-
-      //setInitialImages(i);
-      //setImages(i);
       callAPI();
       swapImage();
 
@@ -134,17 +90,14 @@ function ImageSwapper () {
     useEffect(() => {
 
       const fadeinTimeout = setTimeout(() => {
-        // console.log("Fade in timeout");
         setImageClass('null');
       }, 1000);
 
       const fadeTimeout = setTimeout(() => {
-        // console.log("Fade out timeout");
           setImageClass('fadeout');
       }, 7000);
 
       const intervalId = setTimeout(() => {
-        // console.log("swap");
         swapImage();
       }, 11000)
 

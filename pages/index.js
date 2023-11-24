@@ -15,17 +15,17 @@ export default function Home() {
           crossorigin
         ></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap"
-          rel="stylesheet"
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Playfair+Display:wght@500&display=swap"
         ></link>
         <link
-          href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
-          rel="stylesheet"
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Sofia-Sans:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
-          rel="stylesheet"
-        />
+        {/*<link*/}
+        {/*    rel="stylesheet"*/}
+        {/*    href="https://fonts.googleapis.com/css?family=Sofia-Sans"*/}
+        {/*/>*/}
       </Head>
       <main>
           <SlideShow></SlideShow>
