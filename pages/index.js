@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Footer from "@components/Footer";
+import SlideShow from "./slideshow";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         />
       </Head>
       <main>
+          <SlideShow></SlideShow>
       </main>
 
       <Footer />

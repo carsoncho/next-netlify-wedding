@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 export default function ContactForm() {
   const [selectedFile, setSelectedFile] = useState()
   const [preview, setPreview] = useState()
+  const [disabled, setDisabled] = useState(false);
 
   const inputFileRef = useRef();
 
@@ -41,6 +42,7 @@ export default function ContactForm() {
     inputFileRef.current.click();
   };
 
+
   return (
     <div className="share-form">
       <form name="photos" action="/share-success" method="POST" data-netlify="true">
@@ -73,7 +75,7 @@ export default function ContactForm() {
           <textarea name="message" id="yourmessage"></textarea>
         </p>
         <p>
-          <button type="submit">Share Photo</button>
+          <button type="submit" disabled={disabled} onSubmit={() => setEnabled(!disabled)}>Share Photo</button>
         </p>
       </form>
     </div>
