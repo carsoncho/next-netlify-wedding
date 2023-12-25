@@ -577,3 +577,8 @@ h1 {
   margin: 16px auto;
   text-align: center;
 }
+
+.card-finder-select {
+  margin: 0 8px;
+  font-size: 1.25rem;
+}

@@ -158,7 +158,7 @@ const card_meanings = [
       },
       {
         value: 'nine',
-        meaning: 'The "wish" card—which may come true',
+        meaning: 'Your wish will come true',
       },
       {
         value: 'ten',
@@ -287,15 +287,16 @@ export default function Cartomancy() {
           </p>
         </div>
         <div className='card'>
-          <h2>Yes or No Question</h2>
+          <h2>A more general question</h2>
+          <p>First, remove the face cards from the deck.</p>
+          <p>Shuffle the cards while pondering your question.</p>
           <p>
-            First, make sure you have at least one Joker in your deck of cards.
+            Deal one card in front of you, and look up its associated fortune.
           </p>
-          <p>Shuffle the cards while pondering a yes or no question.</p>
           <p>
-            Begin to deal the cards in front of you while counting. If the Joker
-            appears on an even number, the answer to your query is Yes. If it
-            appears on an odd number, the answer is No.
+            Or, deal three cards and look up their associated fortunes. The
+            leftmost card represents the past, the center card the present, and
+            the right card the future.
           </p>
         </div>
       </div>
@@ -306,6 +307,7 @@ export default function Cartomancy() {
           id='suit-select'
           defaultValue={'clubs'}
           onChange={(e) => setSelectedSuit(e.target.value)}
+          className='card-finder-select'
         >
           <option value='clubs'>Clubs</option>
           <option value='spades'>Spades</option>
@@ -317,6 +319,7 @@ export default function Cartomancy() {
           id='value-select'
           defaultValue={'ace'}
           onChange={(e) => setSelectedCardValue(e.target.value)}
+          className='card-finder-select'
         >
           <option value='ace'>Ace</option>
           <option value='two'>Two</option>
