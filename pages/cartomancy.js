@@ -48,15 +48,15 @@ const card_meanings = [
       },
       {
         value: 'jack',
-        meaning: 'Represents a reliable and trusted dark-haired friend',
+        meaning: 'Trust the advice of a friend',
       },
       {
         value: 'queen',
-        meaning: 'A dark-haired, helpful, and confident woman',
+        meaning: 'A woman with dark hair will help you',
       },
       {
         value: 'king',
-        meaning: 'A dark-haired, strong older man',
+        meaning: 'A dark-haired, strong older man will help you succeed',
       },
     ],
   },
@@ -113,7 +113,7 @@ const card_meanings = [
       },
       {
         value: 'queen',
-        meaning: 'Represents an outgoing woman with light hair',
+        meaning: 'An outgoing woman with light hair will help you',
       },
       {
         value: 'king',
