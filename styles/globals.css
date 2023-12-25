@@ -8,19 +8,17 @@ body {
   scroll-behavior: smooth;
 }
 
-:root{
+:root {
   --white: #f9f9f9;
-  --black: #36383F;
-  --gray: #85888C;
+  --black: #36383f;
+  --gray: #85888c;
 } /* variables*/
-
 
 * {
   box-sizing: border-box;
 }
 
 main {
-
 }
 
 code {
@@ -41,7 +39,6 @@ main {
   display: grid;
   width: 100%;
 }
-
 
 @media (min-width: 768px) {
   .region--top {
@@ -124,7 +121,6 @@ h1 {
   }
 }
 
-
 .photo_gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -142,7 +138,6 @@ h1 {
   object-fit: cover;
   cursor: pointer;
 }
-
 
 .modal__content-image img {
   cursor: initial !important;
@@ -172,7 +167,7 @@ h1 {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -183,7 +178,7 @@ h1 {
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0, 0, 0, .75);
+  background: rgba(0, 0, 0, 0.75);
   z-index: 2;
 }
 
@@ -247,7 +242,7 @@ h1 {
 @media (min-width: 768px) {
   .modal__content--two-col {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
   }
 }
@@ -279,7 +274,7 @@ h1 {
 }
 .header-text h1 {
   text-align: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .header-text h2 {
@@ -288,7 +283,7 @@ h1 {
   margin: 0;
   padding: 0;
   margin-bottom: 3rem;
-  text-align: center;;
+  text-align: center;
 }
 
 .where h2 {
@@ -301,11 +296,10 @@ h1 {
 }
 
 @media (min-width: 768px) {
-
   .mapBox {
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -324,10 +318,9 @@ h1 {
 .centered,
 .registry_heading {
   text-align: center;
-
 }
 
-.registry_heading  a {
+.registry_heading a {
   color: #333;
   text-decoration: underline;
 }
@@ -349,7 +342,7 @@ h1 {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-decoration: underline;
   cursor: pointer;
   color: #333;
@@ -380,7 +373,6 @@ h1 {
   font-weight: bold;
 }
 
-
 /* Injected CSS Code */
 .form-label.form-label-auto {
   display: inline-block;
@@ -389,7 +381,20 @@ h1 {
 }
 
 /* Injected CSS Code */
-@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}
+@media print {
+  .form-section {
+    display: inline !important;
+  }
+  .form-pagebreak {
+    display: none !important;
+  }
+  .form-section-closed {
+    height: auto !important;
+  }
+  .page-section {
+    position: initial !important;
+  }
+}
 
 .slide {
   position: relative;
@@ -405,7 +410,6 @@ h1 {
   font-size: 1rem;
   box-shadow: 10px 5px 5px black;
 }
-
 
 .slide .content p {
   margin-top: 0;
@@ -427,32 +431,30 @@ h1 {
   font-weight: bold;
 }
 
-
 .bottom-left .slide .content {
   bottom: 3rem;
   left: -4rem;
 }
 
-.bottom-right .slide .content  {
+.bottom-right .slide .content {
   bottom: 3rem;
   right: -4rem;
 }
 
-.top-left  .slide .content  {
+.top-left .slide .content {
   top: 3rem;
   left: -4rem;
 }
 
-.top-right .slide .content  {
+.top-right .slide .content {
   top: 3rem;
   right: -4rem;
 }
 
-
 .slide img {
   border-radius: 30px;
   max-height: calc(100vh - 6rem);
-  max-width: calc(100vw - 8rem);
+  max-width: calc(100vw - 600px);
 }
 
 .slideshow {
@@ -467,7 +469,7 @@ h1 {
 .shareBox {
   position: absolute;
   width: 300px;
-  right: .5rem;
+  right: 0.5rem;
   bottom: 0;
 }
 
@@ -490,7 +492,7 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
-.share-form input[type="text"] {
+.share-form input[type='text'] {
   border: 1px solid #333;
   border-radius: 3px;
   width: 100%;
@@ -520,7 +522,7 @@ h1 {
 }
 
 .media-upload {
-  background: rgb(232,235,243);
+  background: rgb(232, 235, 243);
   display: flex;
   justify-content: center;
   color: #fff;
@@ -554,5 +556,24 @@ h1 {
 
 .share-success-content {
   font-size: 2rem;
+  text-align: center;
+}
+
+.card-container {
+  margin: 0 auto;
+}
+
+.card {
+  width: 300px;
+  background-color: #e4ddd8;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 16px auto;
+}
+
+.card-finder {
+  background-color: #e4ddd8;
+  padding: 16px;
+  margin: 16px auto;
   text-align: center;
 }
