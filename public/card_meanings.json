@@ -1,0 +1,17 @@
+{
+  "suits": [
+    {
+      "suit": "clubs",
+      "cards": [
+        {
+          "value": 2,
+          "meaning": "uh oh"
+        },
+        {
+          "value": 3,
+          "meaning": "uh oh"
+        }
+      ]
+    }
+  ]
+}

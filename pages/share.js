@@ -1,9 +1,8 @@
-import { useRef, useState, useEffect } from "react";
-
+import { useRef, useState, useEffect } from 'react';
 
 export default function ContactForm() {
-  const [selectedFile, setSelectedFile] = useState()
-  const [preview, setPreview] = useState()
+  const [selectedFile, setSelectedFile] = useState();
+  const [preview, setPreview] = useState();
   const [disabled, setDisabled] = useState(false);
 
   const inputFileRef = useRef();
@@ -11,71 +10,95 @@ export default function ContactForm() {
   // create a preview as a side effect, whenever selected file is changed
   useEffect(() => {
     if (!selectedFile) {
-        setPreview(undefined)
-        return
+      setPreview(undefined);
+      return;
     }
 
-    const objectUrl = URL.createObjectURL(selectedFile)
-    setPreview(objectUrl)
+    const objectUrl = URL.createObjectURL(selectedFile);
+    setPreview(objectUrl);
 
     // free memory when ever this component is unmounted
-    return () => URL.revokeObjectURL(objectUrl)
-}, [selectedFile])
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [selectedFile]);
 
-  const onFileChangeCapture = ( e ) => {
+  const onFileChangeCapture = (e) => {
     /*Selected files data can be collected here.*/
     console.log(e.target.files);
 
     if (!e.target.files || e.target.files.length === 0) {
-      setSelectedFile(undefined)
-      return
+      setSelectedFile(undefined);
+      return;
     }
 
-    setSelectedFile(e.target.files[0])
-
-  }
-
-
+    setSelectedFile(e.target.files[0]);
+  };
 
   const onBtnClick = () => {
     /*Collecting node-element and performing click*/
     inputFileRef.current.click();
   };
 
-
   return (
-    <div className="share-form">
-      <form name="photos" action="/share-success" method="POST" data-netlify="true">
-        <div className="media-upload" onClick={onBtnClick}>
-          {!selectedFile && <div>Upload<br/>Photo</div>}
-        {selectedFile &&  <img src={preview} /> }
-
+    <div className='share-form'>
+      <div
+        style={{
+          textAlign: 'right',
+          paddingRight: '16px',
+          marginTop: '16px',
+          marginBottom: '16px',
+          fontSize: '18px',
+          fontFamily: 'Lato, sans-serif',
+        }}
+      >
+        <a href='/cartomancy'>How to read your cards</a>
+      </div>
+      <form
+        name='photos'
+        action='/share-success'
+        method='POST'
+        data-netlify='true'
+      >
+        <div className='media-upload' onClick={onBtnClick}>
+          {!selectedFile && (
+            <div>
+              Upload
+              <br />
+              Photo
+            </div>
+          )}
+          {selectedFile && <img src={preview} />}
         </div>
-        <input type="hidden" name="form-name" value="photos" />
-        <div className="photo_upload_widget"></div>
-        <p className="file-field">
+        <input type='hidden' name='form-name' value='photos' />
+        <div className='photo_upload_widget'></div>
+        <p className='file-field'>
           <label>
             <span>Add file:</span>
             <input
               ref={inputFileRef}
               onChangeCapture={onFileChangeCapture}
-              name="file"
-              type="file"
-              accept="image/*"
+              name='file'
+              type='file'
+              accept='image/*'
             />
           </label>
         </p>
         <p>
-          <label htmlFor="yourname">Your Name:</label> <br />
-          <input type="text" name="name" id="yourname" />
+          <label htmlFor='yourname'>Your Name:</label> <br />
+          <input type='text' name='name' id='yourname' />
         </p>
 
         <p>
-          <label htmlFor="yourmessage">Message:</label> <br />
-          <textarea name="message" id="yourmessage"></textarea>
+          <label htmlFor='yourmessage'>Message:</label> <br />
+          <textarea name='message' id='yourmessage'></textarea>
         </p>
         <p>
-          <button type="submit" disabled={disabled} onSubmit={() => setEnabled(!disabled)}>Share Photo</button>
+          <button
+            type='submit'
+            disabled={disabled}
+            onSubmit={() => setEnabled(!disabled)}
+          >
+            Share Photo
+          </button>
         </p>
       </form>
     </div>
