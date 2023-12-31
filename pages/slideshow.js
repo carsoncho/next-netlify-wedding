@@ -68,6 +68,12 @@ function ImageSwapper() {
     { img: 'johnson-engage-364.jpg' },
     { img: 'IMG_1318.jpg' },
     { img: 'IMG_2551.jpeg' },
+    { img: 'ceremony-01.jpg' },
+    { img: 'ceremony-02.jpeg' },
+    { img: 'ceremony-03.jpg' },
+    { img: 'ceremony-04.jpg' },
+    { img: 'us-y.jpeg' },
+    { img: 'us-y-2.jpg' },
   ];
 
   if (postedImages) {
