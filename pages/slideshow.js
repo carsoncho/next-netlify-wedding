@@ -48,7 +48,6 @@ function ImageSwapper() {
   };
 
   const swapImage = async () => {
-    console.log('Swapping Image');
     let selectedIndex = Math.floor(Math.random() * images.length);
     setImageClass('fadeout');
     setImagePosition(styles[Math.floor(Math.random() * styles.length)]);
@@ -63,10 +62,9 @@ function ImageSwapper() {
   ];
 
   let images = [
-    { img: 'johnson-engage-52.jpg' },
     { img: 'johnson-engage-86bw.jpg' },
     { img: 'johnson-engage-183.jpg' },
-    { img: 'johnson-engage-104.jpg' },
+    { img: 'johnson-engage-204.jpg' },
     { img: 'johnson-engage-364.jpg' },
     { img: 'IMG_1318.jpg' },
     { img: 'IMG_2551.jpeg' },
@@ -79,6 +77,7 @@ function ImageSwapper() {
   useEffect(() => {
     callAPI();
     swapImage();
+    console.log('swapping in useEffect');
 
     const fetchInterval = setInterval(() => {
       callAPI();
@@ -87,15 +86,18 @@ function ImageSwapper() {
 
   useEffect(() => {
     const fadeinTimeout = setTimeout(() => {
+      console.log("Fade in timeout");
       setImageClass('null');
     }, 1000);
 
     const fadeTimeout = setTimeout(() => {
+      console.log("Fade out timeout");
       setImageClass('fadeout');
     }, 7000);
 
     const intervalId = setTimeout(() => {
       swapImage();
+      console.log('swapping in intervalId');
     }, 11000);
   }, [currentImage]);
 
